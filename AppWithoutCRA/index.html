@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body style="text-align: center;"> 
+    
+<div id="example"  >
+
+</div>
+
+     <script>
+        // create react element
+const elm=React.createElement("h1",{},"hello world....!");
+// get dom elm where u want to place react element
+const domElm =document.getElementById("example"); 
+const root=ReactDOM.createRoot(domElm);
+root.render(elm)
+
+     </script>
+</body>
+</html>
