@@ -1,3 +1,4 @@
+
 import React from 'react';
 import "./center.css"
 import ExpressiomDemo from '../expressionDemo/ExpressiomDemo';
@@ -9,7 +10,9 @@ import ConditionalDemo4 from '../conditionalRendering/ConditionalDemo4';
 import ListDemo1 from '../list/ListDemo1';
 import ListDemo2 from '../list/ListDemo2';
 import ListDemo3 from '../list/ListDemo3';
-import ListDemo4 from '../list/ListDemo4';
+import GreetDemo1 from '../greet/GreetDemo1';
+import GreetDemo2 from '../greet/GreetDemo2';
+import  ProductList from "../list/ProductList"
 
 export default function Center() {
   return (<>
@@ -24,8 +27,12 @@ export default function Center() {
      {/* <ListDemo1/> */}
      {/* <ListDemo2/> */}
      {/* <ListDemo3/> */}
+     {/* <ProductList/> */}
 
-     <ListDemo4/>
+      {/*//! props and state */}
+     <GreetDemo1 name="saurabh" msg="hello friends...." age={45}/>
+     {/* <GreetDemo2 name="saurabh k" msg="hello react...."/> */}
+
      </div>
   </>
   

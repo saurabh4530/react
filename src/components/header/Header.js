@@ -5,6 +5,6 @@ export default function Header() {
     <h1 style={{
       backgroundColor:"purple",color:"white",
       textAlign:"center",margin:0
-    }}>this is my header</h1>
+    }}>TrendsZio</h1>
   )
 }
