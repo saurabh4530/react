@@ -18,7 +18,12 @@ import Welcome from "../props/Welcome";
 import MyModal from "../props/MyModal";
 import StateDemo1 from "../state/StateDemo1";
 import StateDemo2 from "../state/StateDemo2";
-import StateDemo3 from "../state/StateDemo3";
+import StateDemo3 from "../state/ShowHideDemo3";
+import ShowHideDemo3 from "../state/ShowHideDemo3";
+import TogglePassword1 from "../state/TogglePassword1";
+import RemainingChar from "../state/RemainingChar";
+import SweetAlertDemo1 from "../sweetAlert/SweetAlertDemo1";
+import ModelDemo1 from "../models/ModelDemo1";
 
 export default function Center() {
   let f1=function() {
@@ -96,8 +101,16 @@ export default function Center() {
       {/*//! states  */}
       {/* <StateDemo1/> */}
       {/* <StateDemo2/> */}
-      <StateDemo3/>
+      {/* <ShowHideDemo3/> */}
+      {/* <TogglePassword1/> */}
+      {/* <RemainingChar/> */}
 
+      {/*//! SweetAlert  */}
+
+      {/* <SweetAlertDemo1/> */}
+
+      {/*//! Models  */}
+<ModelDemo1/>
 
       </div>
     </>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function StateDemo3() {
+export default function ShowHideDemo3() {
   let [isVisible, setIsVisible] = useState(false);
 
 //   const toggle = () => {

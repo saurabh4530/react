@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 export default function StateDemo2() {
     let [count ,setCount ]= useState(0)
     const increment=()=>{
-        setCount(count+1);
+        setCount((precount)=>count=precount+1);
     }
     
   return (
