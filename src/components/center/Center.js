@@ -23,8 +23,12 @@ import ShowHideDemo3 from "../state/ShowHideDemo3";
 import TogglePassword1 from "../state/TogglePassword1";
 import RemainingChar from "../state/RemainingChar";
 import SweetAlertDemo1 from "../sweetAlert/SweetAlertDemo1";
-import ModelDemo1 from "../models/ModelDemo1";
-
+import ModelDemo1 from "../models/ModalDemo1";
+import ModalDemo2 from "../models/ModalDemo2"
+import EmployeeList from "../state/EmployeeList";
+import EmployeeCRUD from "../employeeCURD/EmployeeCRUD"
+import EventDemo1 from "../events/EventDemo1";
+import EventDemo2 from "../events/EventDemo2";
 export default function Center() {
   let f1=function() {
     console.log("i am center component");
@@ -110,7 +114,18 @@ export default function Center() {
       {/* <SweetAlertDemo1/> */}
 
       {/*//! Models  */}
-<ModelDemo1/>
+{/* <ModelDemo1/> */}
+{/* <ModalDemo2/> */}
+
+      {/*//! Search and Pagination  */}
+{/* <EmployeeList/> */}
+{/* <EmployeeCRUD/> */}
+
+      {/*//! Events  */}
+
+{/* <EventDemo1/> */}
+<EventDemo2/>
+
 
       </div>
     </>
