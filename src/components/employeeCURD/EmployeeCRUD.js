@@ -19,7 +19,7 @@ export default function EmployeeCRUD() {
   };
 const addEmp=  (empObj)=>{
 setEmployees([...employees,empObj])
-}
+} 
   return ( 
     <>
       <h1 className="text-center bg-primary text-white p-2">

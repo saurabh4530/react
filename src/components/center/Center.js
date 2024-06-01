@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import React from "react";
+import React, { PureComponent } from "react";
 import "./center.css";
 import ExpressiomDemo from "../expressionDemo/ExpressiomDemo";
 import ConditionalDemo1 from "../conditionalRendering/ConditionalDemo1";
@@ -29,6 +29,18 @@ import EmployeeList from "../state/EmployeeList";
 import EmployeeCRUD from "../employeeCURD/EmployeeCRUD"
 import EventDemo1 from "../events/EventDemo1";
 import EventDemo2 from "../events/EventDemo2";
+import PureCompDemo1 from "../misc/PureCompDemo1"
+import PureCompDemo2 from "../misc/PureCompDemo2";
+import MemoDemo1 from "../memo/MemoDemo1";
+import MemoDemo2 from "../memo/MemoDemo2";
+import LifecycleDemo1 from "../lifeCylceHooks/LifecycleDemo1";
+import LifecycleDemo2 from "../lifeCylceHooks/LifecycleDemo2";
+import LifecycleDemo3 from "../lifeCylceHooks/LifecycleDemo3";
+
+
+
+
+
 export default function Center() {
   let f1=function() {
     console.log("i am center component");
@@ -124,9 +136,19 @@ export default function Center() {
       {/*//! Events  */}
 
 {/* <EventDemo1/> */}
-<EventDemo2/>
+{/* <EventDemo2/> */}
 
+      {/*//! PureComponent  */}
+{/* <PureCompDemo1/> */}
+{/* <PureCompDemo2/> */}
 
+      {/*//! MemoComponent  */}
+      {/* <MemoDemo1/> */}
+
+      {/*//! Lifecycle Hooks  */}
+      {/* <LifecycleDemo1 name={"Prasad"}/> */}
+      {/* <LifecycleDemo2/> */}
+      {/* <LifecycleDemo3/> */}
       </div>
     </>
   );
