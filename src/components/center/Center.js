@@ -36,6 +36,17 @@ import MemoDemo2 from "../memo/MemoDemo2";
 import LifecycleDemo1 from "../lifeCylceHooks/LifecycleDemo1";
 import LifecycleDemo2 from "../lifeCylceHooks/LifecycleDemo2";
 import LifecycleDemo3 from "../lifeCylceHooks/LifecycleDemo3";
+import LifecycleDemo5 from "../lifeCylceHooks/LifecycleDemo5";
+import RefDemo1 from "../ref/RefDemo1";
+import RefDemo2 from "../ref/RefDemo2";
+import RefDemo3 from "../ref/RefDemo3";
+import RefDemo4 from "../ref/RefDemo4";
+import FormDemo1 from "../form/FormDemo1";
+import FormDemo2 from "../form/FormDemo2";
+import FormDemo3 from "../form/FormDemo3";
+import FormDemo4 from "../form/FormDemo4";
+import FormDemo5 from "../form/FormDemo5";
+import FormDemo6 from "../form/FormDemo6";
 
 
 
@@ -149,6 +160,19 @@ export default function Center() {
       {/* <LifecycleDemo1 name={"Prasad"}/> */}
       {/* <LifecycleDemo2/> */}
       {/* <LifecycleDemo3/> */}
+      {/* <LifecycleDemo5/> */}
+      {/* <RefDemo1/> */}
+        {/* <RefDemo2/> */}
+          {/* <RefDemo3/> */}
+          {/* <RefDemo4/> */}
+
+      {/*//! Form Validation   */}
+        {/* <FormDemo1/> */}
+        {/* <FormDemo2/> */}
+        {/* <FormDemo3/> */}
+        {/* <FormDemo4/> */}
+        {/* <FormDemo5/> */}
+<FormDemo6/>
       </div>
     </>
   );
