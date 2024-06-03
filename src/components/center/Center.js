@@ -47,6 +47,10 @@ import FormDemo3 from "../form/FormDemo3";
 import FormDemo4 from "../form/FormDemo4";
 import FormDemo5 from "../form/FormDemo5";
 import FormDemo6 from "../form/FormDemo6";
+import HttpDemo1 from "../HTTP/HttpDemo1";
+import HttpDemo2 from "../HTTP/HttpDemo2";
+import HttpDemo3 from "../HTTP/HttpDemo3";
+import HttpDemo4 from "../HTTP/HttpDemo4";
 
 
 
@@ -172,7 +176,15 @@ export default function Center() {
         {/* <FormDemo3/> */}
         {/* <FormDemo4/> */}
         {/* <FormDemo5/> */}
-<FormDemo6/>
+{/* <FormDemo6/> */}
+
+      {/*//! HTTP Methods   */}
+      {/* <HttpDemo1/> */}
+      <HttpDemo2/>
+      {/* <HttpDemo3/> */}
+      <HttpDemo4/> 
+
+
       </div>
     </>
   );
