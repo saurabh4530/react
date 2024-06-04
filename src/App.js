@@ -16,6 +16,20 @@ import AboutUs from "./components/aboutUs/AboutUs";
 import NotFound from "./components/notfound/NotFound"
 import ProductList from "./components/list/ProductList"
 import Careers from "./components/careers/Careers";
+import ProductDetails from "./components/list/ProductDetails";
+import ProductDetail from "./components/list/ProductDetail";
+import ParmenentJob from "./components/careers/ParmenentJob";
+import ContractJob from "./components/careers/ContractJob";
+import ProtectedRoute from "./utils/ProtectedRoute";
+
+
+
+
+
+
+
+
+
 export default function App() {
   MyInterceptor1();
   MyInterceptor2();
@@ -33,8 +47,19 @@ MyInterceptor4()
         <Route  path="/" element={<Home/>}/>
         <Route  path="/Home" element={<Home/>}/>
         <Route  path="/AboutUs" element={<AboutUs/>}/>
-        <Route  path="/Careers" element={<Careers/>}/>
-        <Route  path="/ProductList" element={<ProductList/>}/>
+        <Route   path="/Careers" element={<Careers/>}>
+          <Route index element={<ParmenentJob/>}/>
+          <Route   path="/Careers/ParmenentJob" element={<ParmenentJob/>}/>
+          <Route  path="/Careers/ContractJob" element={<ContractJob/>}/>
+        </Route>
+        <Route  path="/ProductList" element={
+          <ProtectedRoute>
+            <ProductList/>
+          </ProtectedRoute>
+        }/>
+        <Route  path="/ProductDetails/:id" element={<ProductDetails/>}/> {/* {remember to give id while using paraams} */}
+        <Route  path="/ProductDetail" element={<ProductDetail/>}/>
+
         <Route path="*" element={<NotFound/>}/>
 
 

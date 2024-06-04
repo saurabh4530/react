@@ -64,7 +64,7 @@ export default function Center() {
     <>
       <div className="center">
         {" "}
-        this is Center
+      
         {/* <ExpressiomDemo/> */}
         {/* <ConditionalCss/> */}
         {/* <ConditionalDemo1/> */}
@@ -180,9 +180,9 @@ export default function Center() {
 
       {/*//! HTTP Methods   */}
       {/* <HttpDemo1/> */}
-      <HttpDemo2/>
+      {/* <HttpDemo2/> */}
       {/* <HttpDemo3/> */}
-      <HttpDemo4/> 
+      {/* <HttpDemo4/>  */}
 
 
       </div>
