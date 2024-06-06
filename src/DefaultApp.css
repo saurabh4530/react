@@ -1,0 +1,39 @@
+.A_React {
+    text-align: center;
+  }
+  
+  .A_React-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .A_React-logo {
+      animation: A_React-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .A_React-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .A_React-link {
+    color: #61dafb;
+  }
+  
+  @keyframes A_React-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
