@@ -30,16 +30,27 @@ import Parent1 from "./A_React/hooks/childToParentDataPass/Parent1.js";
 import DataFetch from "./A_React/hooks/useReducer/DataFetch.js";
 import DataFetchTwo from "./A_React/hooks/useReducer/DataFetchTwo.js";
 import Default from "./A_React/basicJSX/DefaultApp.js"
+import UseStateDemo1 from "./A_React/allHooks/useState/UseStateDemo1.js";
+import UseStatedemo2 from "./A_React/allHooks/useState/UseStatedemo2.js";
+import UseEffectDemo1 from "./A_React/allHooks/useEffect/UseEffectDemo1.js";
+import UseRefDemo1 from "./A_React/allHooks/useRef/UseRefDemo1.js";
+import UseRefDemo2 from "./A_React/allHooks/useRef/UseRefDemo2.js";
+import UseMeMODemo from "./A_React/allHooks/useMEMO/UseMeMODemo.js";
+import UseCallback from "./A_React/allHooks/usecallback/UseCallback.js";
+import UseReducerDemo1 from "./A_React/allHooks/useReducer/UseReducerDemo1.js";
 
 
 export const UserContext= React.createContext();
 export const ChannelContext= React.createContext();
+
+
 // Define a functional component called App
  function AReactApp() {
   return (
     <div>
     <div className="App">
       <header className="App-header">
+        <>
         {/* First Default React component */}
         {/* <Default/> */}
 
@@ -101,6 +112,18 @@ export const ChannelContext= React.createContext();
   {/* data fetchig with useReducer */}
   {/* <DataFetch/> */}
   {/* <DataFetchTwo/> */}
+  </>
+{/*! useState hook */}
+{/* <UseStateDemo1/> */}
+{/* <UseStatedemo2/> */}
+{/* <UseEffectDemo1/> */}
+{/* <UseRefDemo1/> */}
+{/* <UseRefDemo2/> */}
+{/* <UseMeMODemo/> */}
+{/* <UseCallback/> */}
+<UseReducerDemo1/>
+
+
 
       </header>
 

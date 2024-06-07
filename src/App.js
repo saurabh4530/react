@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Profiler, Suspense } from "react";
 import Center from "./components/center/Center";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
@@ -28,9 +28,31 @@ import Mycomponent from "./components/errorboundaries/Mycomponent";
 
 
 
+//! code Spliting & lazyLoading
 const LazyHome = React.lazy(() => import("./components/home/Home"));
 const LazyAboutUS = React.lazy(() => import("./components/aboutUs/AboutUs"));
 const LazyCareer = React.lazy(() => import("./components/careers/Careers"));
+
+//! Profiler Callback function
+const onRenderCallback = (
+  phase, // either "mount" (if the tree just mounted) or "update" (if it re-rendered)
+  id, // the "id" prop of the Profiler tree that has just committed
+  actualDuration, // time spent rendering the committed update
+  baseDuration, // estimated time to render the entire subtree without memoization
+  startTime, // when React began rendering this update
+  commitTime, // when React committed this update}
+  interactions // the Set of interactions belonging to this update}
+) => {
+  console.log('id:', id);
+  console.log('phase:', phase);
+  console.log('actualDuration:', actualDuration);
+  console.log('baseDuration:', baseDuration);
+  console.log('startTime:', startTime);
+  console.log('commitTime:', commitTime);
+  console.log('interactions:', interactions);
+};
+
+
 
 export default function App() {
   MyInterceptor1();
@@ -39,10 +61,13 @@ export default function App() {
   MyInterceptor4();
   return (
     <div>
-      {/* <Header /> */}
+      <Profiler id="App" onRender={onRenderCallback}>
+      <Header />
+      <Profiler id="Navbar" onRender={onRenderCallback}>
       <Navbar />
-      {/* <Categories /> */}
-      {/* <Carousel />        */}
+      </Profiler>
+      <Categories />
+      <Carousel />       
 
       <Suspense fallback={<div>Loading............!</div>}>
         <Routes>
@@ -88,6 +113,7 @@ export default function App() {
 
 
       <Footer />
+      </Profiler>
     </div>
   );
 }

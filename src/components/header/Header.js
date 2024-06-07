@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default function Header() {
+ function Header() {
+  console.log("header");
   return (
     <h1 style={{
       backgroundColor:"purple",color:"white",
@@ -8,3 +9,4 @@ export default function Header() {
     }}>TrendsZio</h1>
   )
 }
+export default React.memo(Header)

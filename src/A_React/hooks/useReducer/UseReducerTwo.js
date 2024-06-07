@@ -40,7 +40,7 @@ export default function UseReducerTwo() {
     
     <div>second Counter={count.secondCounter}</div>
       <button onClick={()=>Dispatch( {type:"increment2",value:2})}>increment</button>
-      <button onClick={()=>Dispatch( {type:"decrement2",value:1})}>decrement</button>
+      <button onClick={()=>Dispatch( {type:"decrement2",value:5})}>decrement</button>
       <button onClick={()=>Dispatch({type:"reset"})}>reset</button>
       
     </div>

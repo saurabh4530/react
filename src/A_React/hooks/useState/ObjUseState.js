@@ -4,28 +4,25 @@ function ObjUseState() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const handleChange = (event) => {
- 
     setFormData((prevData) => ({
       ...prevData,
-      [event.target.name]:event.target.value,
+      [event.target.name]: event.target.value,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) => { 
     e.preventDefault();
 
-    
-
-    console.log( formData);
+    console.log(formData);
   };
 
   return (
     <div>
-        <div>ObjUseState</div>
+      <div>ObjUseState</div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name :</label>
         <input
@@ -49,13 +46,18 @@ function ObjUseState() {
         <br /> <br />
         <label htmlFor="message">Message:</label>
         <textarea
-          name="message" id="message"
+          name="message"
+          id="message"
           value={formData.message}
           onChange={handleChange}
-        
         />
         <br />
-        <button type="submit" style={{backgroundColor:"green" ,color:"white"}}>SUBMIT</button>
+        <button
+          type="submit"
+          style={{ backgroundColor: "green", color: "white" }}
+        >
+          SUBMIT
+        </button>
       </form>
     </div>
   );
