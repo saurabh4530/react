@@ -5,11 +5,11 @@ export default function Product(props) {
   //props destructuring...
 const {image,category,title,price,rating,id}=props.prod;
 const  navigate=useNavigate()
-const navigateHandler=(title,price)=>{
+const navigateHandler=(title,price,image,category)=>{
   navigate({
     pathname:"/ProductDetail",
     search:`?${createSearchParams({
-      title,price,category
+      title,price,image,category
     })}`,  
   })
      
@@ -32,7 +32,7 @@ const navigateHandler=(title,price)=>{
           </button>
        
           <button className='btn btn-warning' onClick={()=>{
-            navigateHandler(title,price)
+            navigateHandler(title,price,image,category)
           }}>
             view-2
           </button>

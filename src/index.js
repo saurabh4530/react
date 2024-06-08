@@ -15,11 +15,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <StrictMode>
         {/*//! react-DEMO*/}
-        {/* <BrowserRouter>
+        <BrowserRouter>
         <App />
         
-        </BrowserRouter> */}
-        <AReact/>
+        </BrowserRouter>
+        {/* <AReact/> */}
 
     </StrictMode>
   

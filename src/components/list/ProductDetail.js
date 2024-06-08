@@ -17,7 +17,7 @@ export default function ProductDetail() {
                 <div className="card col-sm-3 offset-3">
                     <img src={params.image} className="card-img-top" style={{ height: "250px" }} alt="" />
                     <div className="card-body text-center">
-                        <h5 className="card-title">{params.category}</h5>
+                        <h5 className="card-title">{params?.category}</h5>
                         <p className="card-text">{params.title}</p>
                         <p className="card-text">Price: {params.price}</p>
                      
