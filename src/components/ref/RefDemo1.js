@@ -10,9 +10,7 @@ useEffect(() => {
     myRef.val=count
     console.log("useEffect is called...");
 
-  return () => {
-    
-  };
+ 
 }, )
   return (
   <>

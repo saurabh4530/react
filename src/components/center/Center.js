@@ -83,7 +83,7 @@ export default function Center() {
       <div>this is first div</div>
       <div>this is second div</div>
      </Welcome> */}
-        {/* <MyModal heading="Registration Form">
+        <MyModal heading="Registration Form">
           <>     
             {" "}
             <form>
@@ -127,7 +127,7 @@ export default function Center() {
             </form>
             <div>this is your props.children concept</div>
           </>
-        </MyModal> */}
+        </MyModal>
 
       {/*//! states  */}
       {/* <StateDemo1/> */}
@@ -146,7 +146,7 @@ export default function Center() {
 
       {/*//! Search and Pagination  */}
 {/* <EmployeeList/> */}
-{/* <EmployeeCRUD/> */}
+<EmployeeCRUD/>
 
       {/*//! Events  */}
 

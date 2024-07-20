@@ -1,10 +1,34 @@
 import React from 'react';
 
-const MyComponent = () => {
-  // Simulate an error in the component
-  throw new Error("Simulated error in MyComponent");
+import { useEffect, useState } from 'react';
 
-  return <div>This is MyComponent</div>;
-};
+function Mycomponent() {
+  debugger
+  const [count, setCount] = useState(0);
 
-export default MyComponent;
+  // ComponentDidMount
+  useEffect(() => {
+    console.log('Component mounted');
+  }, []);
+
+  // ComponentDidUpdate
+  useEffect(() => {
+    console.log('Count updated:', count);
+  }, [count]);
+
+  // ComponentWillUnmount
+  useEffect(() => {
+    return () => {
+      console.log('Component unmounted');
+    };
+  }, []);
+  
+  return (
+    <div>
+      <p>{count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+export default Mycomponent;

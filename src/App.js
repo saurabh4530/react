@@ -24,10 +24,6 @@ import ProtectedRoute from "./utils/ProtectedRoute";
 import ErrorBoundaries from "./components/errorboundaries/ErrorBoundaries";
 import Mycomponent from "./components/errorboundaries/Mycomponent";
 
-
-
-
-
 //! code Spliting & lazyLoading
 const LazyHome = React.lazy(() => import("./components/home/Home"));
 const LazyAboutUS = React.lazy(() => import("./components/aboutUs/AboutUs"));
@@ -43,16 +39,14 @@ const onRenderCallback = (
   commitTime, // when React committed this update}
   interactions // the Set of interactions belonging to this update}
 ) => {
-  console.log('id:', id);
-  console.log('phase:', phase);
-  console.log('actualDuration:', actualDuration);
-  console.log('baseDuration:', baseDuration);
-  console.log('startTime:', startTime);
-  console.log('commitTime:', commitTime);
-  console.log('interactions:', interactions);
+  console.log("id:", id);
+  console.log("phase:", phase);
+  console.log("actualDuration:", actualDuration);
+  console.log("baseDuration:", baseDuration);
+  console.log("startTime:", startTime);
+  console.log("commitTime:", commitTime);
+  console.log("interactions:", interactions);
 };
-
-
 
 export default function App() {
   MyInterceptor1();
@@ -61,58 +55,57 @@ export default function App() {
   MyInterceptor4();
   return (
     <div>
-      <Profiler id="App" onRender={onRenderCallback}>
-      <Header />
-      <Profiler id="Navbar" onRender={onRenderCallback}>
-      <Navbar />
-      </Profiler>
-      <Categories />
-      <Carousel />       
 
-      <Suspense fallback={<div>Loading............!</div>}>
-        <Routes>
-          <Route path="/" element={<LazyHome />} />
-          <Route path="/Home" element={<LazyHome />} />
-          <Route path="/AboutUs" element={<LazyAboutUS />} />
-          <Route
-            path="/Careers"
-            element={
-              <Suspense fallback={<h3>Loading..........!</h3>}>
-                <LazyCareer />
-              </Suspense>
-            }
-          >
-            <Route index element={<ParmenentJob />} />
-            <Route path="/Careers/ParmenentJob" element={<ParmenentJob />} />
-            <Route path="/Careers/ContractJob" element={<ContractJob />} />
-          </Route>
-          <Route
-            path="/ProductList"
-            element={
-              <ProtectedRoute>
-                <ProductList />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="/ProductDetails/:id" element={<ProductDetails />} />{" "}
-          {/* {remember to give id while using paraams} */}
-          <Route path="/ProductDetail" element={<ProductDetail />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
+      <Profiler id="App" onRender={onRenderCallback}>
+      <ErrorBoundaries>
+        <Header />
+        <Profiler id="Navbar" onRender={onRenderCallback}>
+          <Navbar />
+        </Profiler>
+        <Categories />
+        <Carousel />
+
+        <Suspense fallback={<div>Loading............!</div>}>
+          <Routes>
+            <Route path="/" element={<LazyHome />} />
+            <Route path="/Home" element={<LazyHome />} />
+            <Route path="/AboutUs" element={<LazyAboutUS />} />
+            <Route
+              path="/Careers"
+              element={
+                <Suspense fallback={<h3>Loading..........!</h3>}>
+                  <LazyCareer />
+                </Suspense>
+              }
+            >
+              <Route index element={<ParmenentJob />} />
+              <Route path="/Careers/ParmenentJob" element={<ParmenentJob />} />
+              <Route path="/Careers/ContractJob" element={<ContractJob />} />
+            </Route>
+            <Route
+              path="/ProductList"
+              element={
+                <ProtectedRoute>
+                  <ProductList />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/ProductDetails/:id" element={<ProductDetails />} />{" "}
+            {/* {remember to give id while using paraams} */}
+            <Route path="/ProductDetail" element={<ProductDetail />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+
+        <Center />
+
+        {/*//! Error Boundaries  */}
+      
+        
      
 
-      <Center />
-
-
-
-            {/*//! Error Boundaries  */}
-            {/* <ErrorBoundaries>
-        <Mycomponent/>
-      </ErrorBoundaries> */}
-
-
-      <Footer />
+        <Footer />
+        </ErrorBoundaries>
       </Profiler>
     </div>
   );

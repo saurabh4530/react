@@ -26,7 +26,7 @@ export default function FormDemo4() {
   };
   const addSkill = (userInd) => {
     users[userInd].skills.push(emptySkill);
-    console.log(users)
+    console.log(users);
     setUsers([...users]);
   };
 

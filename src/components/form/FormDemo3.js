@@ -6,7 +6,7 @@ export default function FormDemo3() {
      
   return (<>
   <div>FormDemo3  form data in obj</div>
-  <form >
+  <form  >
     <p>
         FirstName:
         <input name="fName" value={user.fName} onChange={(e)=>{

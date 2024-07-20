@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useRef } from 'react';
 
-function RefDemo4() {
+function RefDemo4() {    
   let myRef1 ;
   let myRef2 ;
 
